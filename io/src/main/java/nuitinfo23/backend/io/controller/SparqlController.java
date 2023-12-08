@@ -1,4 +1,4 @@
-package com.example.hello;
+package nuitinfo23.backend.io.controller;
 
 import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.QueryLanguage;
@@ -45,13 +45,12 @@ public class SparqlController {
                     String name = bindingSet.getValue("personLabel").stringValue();
                     String description = bindingSet.getValue("description").stringValue();
                     String imageUrl = bindingSet.getValue("image").stringValue();
-                    /* 
+
                     resultStringBuilder.append("Person: ").append(linkToPage).append(", Label: ").append(name)
                             .append(", Description: ").append(description)
                             .append(", Image: ").append(imageUrl)
                             .append("<br>");
-                */
-                        }
+                }
 
             }
         } catch (Exception e) {
