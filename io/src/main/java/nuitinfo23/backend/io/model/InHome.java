@@ -14,11 +14,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "InHome")
-public class InHome {
+public class InHome  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_h;
     private String image_url; /* */
     private String brief_explanation;
 
+
+   
 }
