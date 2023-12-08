@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: back-end
-        image: back-end
+        image: back-end-img
         ports:
         - containerPort: 8080
         
