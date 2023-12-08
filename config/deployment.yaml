@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: back-end
-        image: back-end-img
+        image: spring
         ports:
         - containerPort: 8080
         
