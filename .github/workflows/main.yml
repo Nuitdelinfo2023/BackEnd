@@ -23,10 +23,10 @@ jobs:
       run: doctl registry login --expiry-seconds 1200
   
     - name: Push image to DigitalOcean Container Registry
-      run: docker push registry.digitalocean.com/nuitinforegistery/front-end:$(echo $GITHUB_SHA | head -c7)
+      run: docker push registry.digitalocean.com/nuitinforegistery/back-end:$(echo $GITHUB_SHA | head -c7)
 
     - name: Update deployment file
-      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|front-end|registry.digitalocean.com/nuitinforegistery/front-end:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yaml
+      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|back-end|registry.digitalocean.com/nuitinforegistery/back-end:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yaml
     
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 nuitinfocluster
