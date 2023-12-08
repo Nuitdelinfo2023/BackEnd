@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import nuitinfo23.backend.io.model.InHome;
 
 @Repository
-public interface InHomeRepository extends JpaRepository<InHome,Integer> {
-    
+public interface InHomeRepository extends JpaRepository<InHome, Integer> {
+
 }
